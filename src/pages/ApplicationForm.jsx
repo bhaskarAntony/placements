@@ -20,7 +20,7 @@ export default function ApplicationForm() {
     setLoading(true);
 
     try {
-      const response = await fetch("httphttps://placements-backend-99z8.onrender.com/api/apply", {
+      const response = await fetch("https://placements-backend-99z8.onrender.com/api/apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, jobId }),
