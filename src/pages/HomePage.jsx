@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Search, Briefcase, GraduationCap, Award, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import JobsPage from './JobsPage';
 
 const jobs = [
   {
@@ -70,16 +71,66 @@ const applicationSteps = [
     icon: Award
   }
 ];
+const reviews = [
+  {
+    name:"M.Yashashwini Manjunatha",
+    feedback:`
+      I recently completed a [Java full stack course] at Be Practical Tech Solutions, and my experience was fantastic! The training was highly practical, making complex topics easy to understand, even for beginners. The instructors were knowledgeable, patient, and always ready to help.I would like to express my sincere gratitude to BE-PRACTICAL TECH SOLUTIONS for their excellent guidance. Special thanks to the trainers bheemesh sir and Bhaskar sir.they helped me in gaining technical skills on Back end and front end technologies which helped me gain valuable knowledge.Special thanks to HR Kavitha ma'am and I truly appreciate the support.
+Thank you so much..
+    `
+  },
+  {
+    name:"srinidhi ganachari",
+    feedback:"Be Practical tech solutions provided excellent guidance and support throughout my preparation, helping me build the skills and confidence to clear my interview. Their training sessions were focused and highly effective. I highly recommend them to anyone aiming for career success!"
+  },
+  {
+    name:"Kotireddy Laya",
+    feedback:"I had a great learning experience at Be-Practical Tech Solutions. My course is Java Fullstack .The course covered key technologies with knowledgeable faculty, hands-on projects, and weekly mock interviews that greatly improved my confidence. The grooming sessions offered valuable insights for job preparation. The HR team was also very supportive and communicated effectively throughout the course. Thank you, Be Practical Tech Solutions, for such a valuable learning experience!"
+  },
+  {
+    name:"srinidhi ganachari",
+    feedback:"Be Practical tech solutions provided excellent guidance and support throughout my preparation, helping me build the skills and confidence to clear my interview. Their training sessions were focused and highly effective. I highly recommend them to anyone aiming for career success!"
+  },
+  {
+    name:"Srinivas S",
+    feedback:"I completed the Java Full Stack course at Be Practical Tech Solutions, covering Java and front-end technologies. The hands-on projects and supportive instructors made complex topics easy to grasp. Thanks to their excellent placement support, I secured a job right after the course. Highly recommended for aspiring full-stack developers!"
+  },
+  {
+    name:"Monica sd",
+    feedback:`I recently completed the MERN Stack Development course at Be Practical Tech Solution, and it was a great experience.
+The course covered all the key topics and included projects that made learning simple and practical. The instructors were knowledgeable and supportive, always ready to clarify doubts. The HR team was also very supportive and communicated effectively throughout the course.
+Thank you be practical for valuable learning experience!`
+  },
+  {
+    name:"Prateek Singh",
+    feedback:"I had a wonderful experience with Be Practical. Their team was knowledgeable, supportive, and always available to help. They made the job placement process smooth and stress-free, and I'm thrilled to have been placed at Mphasis."
+  },
+  {
+    name:"Shashank Shekhar",
+    feedback:`I recently completed the Hire Train Deploy (HTD) course with Be Practical, and I was thoroughly impressed. The course was well-structured, blending theory with practical applications tailored for technical support roles.
+
+A special shoutout to the highly skilled trainers, whose expertise and engaging teaching style made a significant impact on my learning. Their ability to clarify complex concepts and provide hands-on training was invaluable.
+
+Overall, the HTD course equipped me with essential skills and insights for a successful career in technical support. I highly recommend it to anyone looking to advance in this field.`
+  },
+  {
+    name:"bhavitha reddy",
+    feedback:`I had a great learning experience at Be-Practical Tech Solutions, Basaveshwara. The faculty is highly skilled, providing practical and clear guidance that helped me gain in-depth knowledge in my field. The hands-on approach ensured I was job-ready by the end of the course. The HR team was very supportive during the placement process, offering valuable assistance and opportunities, which helped me secure a job that aligns with my career aspirations. Overall, Be-Practical Tech Solutions is a fantastic institute for anyone looking to boost their technical skills and achieve career success."`
+  }
+]
 
 export default function HomePage() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-100">
       {/* Hero Section */}
       <div className="bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Find Your Dream Job with <span className="text-indigo-600">Be Practical</span>
+              Find Your Dream Job with <span className="text-indigo-600">Be Practical </span>
+              with <span className="text-red-600"><strike>Limited Jobs</strike></span>
+            
+              <span className="text-green-600">  Unlimited Jobs</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">
               Connect with top companies hiring tech talent
@@ -92,7 +143,7 @@ export default function HomePage() {
                   placeholder="Search for jobs..."
                   className="w-full p-2 outline-none bg-transparent"
                 />
-                <button className="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700">
+                <button className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
                   Search
                 </button>
               </div>
@@ -100,35 +151,15 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      {/* Application Process */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">How to Apply</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {applicationSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Jobs */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Featured Jobs</h2>
-            <Link to="/jobs" className="text-indigo-600 flex items-center hover:text-indigo-700">
+            <Link to="/jobs" className="text-green-600 flex items-center hover:text-green-700">
               View All Jobs <ArrowRight className="ml-2" />
             </Link>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {jobs.map(job => (
               <div key={job.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
                 <div className="flex justify-between items-start mb-4">
@@ -138,7 +169,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">
                     {job.location}
                   </span>
                   <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">
@@ -158,15 +189,37 @@ export default function HomePage() {
                 </div>
                 <Link
                   to={`/apply/${job.id}`}
-                  className="block w-full text-center bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700"
+                  className="block w-full text-center bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
                 >
                   Apply Now
                 </Link>
               </div>
             ))}
+          </div> */}
+          <JobsPage/>
+        </div>
+      </section>
+
+      {/* Application Process */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">How to Apply</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {applicationSteps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Featured Jobs */}
+     
 
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-900 text-white">
@@ -174,21 +227,21 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Be Practical</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Top Companies</h3>
               <p className="text-gray-400">Access opportunities from leading tech companies</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Verified Jobs</h3>
               <p className="text-gray-400">All jobs are verified and from trusted employers</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Career Growth</h3>
@@ -203,7 +256,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
+            {reviews.map((item, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <img
@@ -212,17 +265,21 @@ export default function HomePage() {
                     className="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="font-semibold">Bhaskar</h3>
-                    <p className="text-gray-600">Software Engineer at Google</p>
+                    <h3 className="font-semibold">{item.name}</h3>
+                    <p className="text-gray-600">Working ⭐...</p>
                   </div>
                 </div>
                 <p className="text-gray-700">
-                  "Be Practical helped me land my dream job. The process was smooth and the support was incredible!"
+                  {item.feedback}
                 </p>
               </div>
             ))}
           </div>
         </div>
+        <br /><br />
+        <center>
+            <Link to="https://be-practical.com" className='mt-8 d-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700'>And More... Success Stories</Link>
+        </center>
       </section>
     </div>
   );

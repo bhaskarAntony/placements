@@ -8,16 +8,16 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <GraduationCap className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Be Practical</span>
+              {/* <GraduationCap className="h-8 w-8 text-green-600" /> */}
+              <span className="ml-2 text-xl font-bold text-gray-900"><img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" width={150} alt="" /></span>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/" className="text-gray-700 hover:text-indigo-600 px-3 py-2">Home</Link>
-            <Link to="/jobs" className="text-gray-700 hover:text-indigo-600 px-3 py-2">Search Jobs</Link>
-            <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
-              Are you a recruiter?
-            </button>
+            <Link to="/" className="text-gray-700 hover:text-green-600 px-3 py-2">Home</Link>
+            <Link to="/jobs" className="text-gray-700 hover:text-green-600 px-3 py-2">Search Jobs</Link>
+            <Link to="https://be-practical.com" className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+              Need Featured Courses?
+            </Link>
           </div>
         </div>
       </div>

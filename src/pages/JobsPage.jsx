@@ -4,12 +4,37 @@ import { Search, MapPin, Building, Clock, ArrowLeft } from "lucide-react";
 const jobs = [
   {
     id: 1,
+    title: "Software Development Engineer 1 (SDE-1)",
+    company: "Flipkart",
+    location: "Bangalore",
+    type: "Full Time",
+    experience: "0-2 Years",
+    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSfa3uvIVMA6_5SUibk0_-FHJ4m_azDOEhL9irDnnsuzmiu8bA/viewform",
+    description:
+      "Flipkart is hiring SDE-1 engineers to develop scalable and efficient systems, solve complex problems, and contribute to core tech innovations.",
+    salary: "₹32.57 LPA",
+    skills: ["Java", "DSA", "System Design"],
+    responsibilities: [
+      "Design OOP models and implement scalable business logic.",
+      "Solve complex problems using strong DS & Algo skills.",
+      "Work on real-world applications: supply chain, search, fraud detection, analytics, etc.",
+      "Write clean, efficient, and maintainable code in Java/C++/Scala.",
+    ],
+    requirements: [
+      "Strong problem-solving and coding skills.",
+      "Excellent grasp of DS, Algorithms, and OOP concepts.",
+      "Experience with at least one general-purpose programming language.",
+      "Ability to handle abstract and real-world problems efficiently.",
+    ],
+  },
+  {
+    id: 2,
     title: "Software Engineer || Capgemini Exceller 2024-25",
     company: "Capgemini",
     location: "PAN India",
     type: "Full Time",
     experience: "Fresher",
-    applyLink: "https://capgemini.com/careers/exceller",
+    applyLink: "https://app.joinsuperset.com/join/#/signup/student/jobprofiles/b2b3410b-b0f4-4b50-86e5-a0c918a2f9b1",
     description:
       "Capgemini is hiring top technical graduates to join us as part of our Exceller program, where you'll work with diverse teams, cross-functional projects, and contribute to sustainable tech solutions.",
     salary: "₹4 LPA - ₹7.5 LPA",
@@ -28,7 +53,7 @@ const jobs = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Software Developer - Virtual Drive",
     company: "Mallow Technologies",
     location: "Coimbatore/Karur, Tamil Nadu",
@@ -53,13 +78,13 @@ const jobs = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Software Developer & Content/Technical Writer",
     company: "Zoho",
     location: "Tamil Nadu",
     type: "Full Time",
     experience: "0-2 Years",
-    applyLink: "https://zoho.com/careers",
+    applyLink: "https://careers.zohocorp.com/forms/fcc89b5ebd373d598e0224d10f2199d1976eb21e6e0226d5c35bfacc49166c9d",
     description:
       "Zoho is looking for Software Developers and Technical Writers to join our team. The role involves working on high-performance applications and producing technical documentation.",
     salary: "Based on experience",
@@ -77,36 +102,12 @@ const jobs = [
       "Candidates must be willing to work from any Tamil Nadu location.",
     ],
   },
-  {
-    id: 4,
-    title: "Software Development Engineer 1 (SDE-1)",
-    company: "Flipkart",
-    location: "Bangalore",
-    type: "Full Time",
-    experience: "0-2 Years",
-    applyLink: "https://flipkart.careers.com/sde1",
-    description:
-      "Flipkart is hiring SDE-1 engineers to develop scalable and efficient systems, solve complex problems, and contribute to core tech innovations.",
-    salary: "₹32.57 LPA",
-    skills: ["Java", "DSA", "System Design"],
-    responsibilities: [
-      "Design OOP models and implement scalable business logic.",
-      "Solve complex problems using strong DS & Algo skills.",
-      "Work on real-world applications: supply chain, search, fraud detection, analytics, etc.",
-      "Write clean, efficient, and maintainable code in Java/C++/Scala.",
-    ],
-    requirements: [
-      "Strong problem-solving and coding skills.",
-      "Excellent grasp of DS, Algorithms, and OOP concepts.",
-      "Experience with at least one general-purpose programming language.",
-      "Ability to handle abstract and real-world problems efficiently.",
-    ],
-  },
+ ,
 ];
 
 export default function JobsPage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedJob, setSelectedJob] = useState(jobs[0]);
   const [showDetails, setShowDetails] = useState(false);
 
   const handleSearch = (value) => {
@@ -128,7 +129,7 @@ export default function JobsPage() {
                 value={searchTerm}
                 onChange={(e) => handleSearch(e.target.value)}
               />
-              <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+              <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
                 Search
               </button>
             </div>
@@ -150,11 +151,11 @@ export default function JobsPage() {
                     setShowDetails(true);
                   }}
                   className={`p-4 border-b last:border-b-0 cursor-pointer transition-colors ${
-                    selectedJob?.id === job.id ? "bg-indigo-50" : "hover:bg-gray-50"
+                    selectedJob?.id === job.id ? "bg-green-50" : "hover:bg-gray-50"
                   }`}
                 >
                   <h3 className="text-lg font-semibold text-gray-900">{job.title}</h3>
-                  <p className="text-gray-600 mb-2">{job.company}</p>
+                  <p className="text-green-600 mb-2">{job.company}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500">
                     <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-1" />
@@ -176,7 +177,7 @@ export default function JobsPage() {
               {/* Back Button for Mobile */}
               <button
                 onClick={() => setShowDetails(false)}
-                className="md:hidden flex items-center gap-2 text-indigo-600 mb-4"
+                className="md:hidden flex items-center gap-2 text-green-600 mb-4"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Back to Job Listings
@@ -185,7 +186,7 @@ export default function JobsPage() {
               <h2 className="text-2xl font-bold text-gray-900">{selectedJob.title}</h2>
               <div className="flex items-center gap-2 mt-2">
                 <Building className="w-5 h-5 text-gray-500" />
-                <span className="text-gray-600">{selectedJob.company}</span>
+                <span className="text-green-600">{selectedJob.company}</span>
               </div>
 
               {/* Job Info */}
@@ -208,7 +209,7 @@ export default function JobsPage() {
                 <h3 className="text-lg font-semibold">Skills Required</h3>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {selectedJob.skills.map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">
                       {skill}
                     </span>
                   ))}
@@ -237,10 +238,10 @@ export default function JobsPage() {
 
               {/* Apply Button */}
               <a
-                href={selectedJob.applyLink}
+                href={`/apply/${selectedJob.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 mt-4"
+                className="block w-full text-center bg-green-600 text-white py-3 rounded-md hover:bg-green-700 mt-4"
               >
                 Apply Now
               </a>
