@@ -239,7 +239,7 @@ export default function JobsPage() {
               {/* Apply Button */}
               <a
                 href={`/apply/${selectedJob.id}`}
-                target="_blank"
+               
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-green-600 text-white py-3 rounded-md hover:bg-green-700 mt-4"
               >
