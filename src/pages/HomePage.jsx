@@ -75,7 +75,7 @@ const reviews = [
   {
     name:"M.Yashashwini Manjunatha",
     feedback:`
-      I recently completed a [Java full stack course] at Be Practical Tech Solutions, and my experience was fantastic! The training was highly practical, making complex topics easy to understand, even for beginners. The instructors were knowledgeable, patient, and always ready to help.I would like to express my sincere gratitude to BE-PRACTICAL TECH SOLUTIONS for their excellent guidance. Special thanks to the trainers bheemesh sir and Bhaskar sir.they helped me in gaining technical skills on Back end and front end technologies which helped me gain valuable knowledge.Special thanks to HR Kavitha ma'am and I truly appreciate the support.
+      I recently completed a [Java full stack course] at Be Practical Tech Solutions, and my experience was fantastic! The training was highly practical, making complex topics easy to understand, even for beginners. The instructors were knowledgeable, patient, and always ready to help.I would like to express my sincere gratitude to BE-PRACTICAL TECH SOLUTIONS for their excellent guidance. Special thanks to the trainers bheemesh sir and Bhaskar sir. they helped me in gaining technical skills on Back end and front end technologies which helped me gain valuable knowledge.Special thanks to HR Kavitha ma'am and I truly appreciate the support.
 Thank you so much..
     `
   },
@@ -127,13 +127,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Find Your Dream Job with <span className="text-indigo-600">Be Practical </span>
-              with <span className="text-red-600"><strike>Limited Jobs</strike></span>
+            Find Your Dream Job with  – <span className="text-indigo-600">Be Practical </span>
+              with <span className="text-red-600"><strike>Limited</strike></span>
             
-              <span className="text-green-600">  Unlimited Jobs</span>
+              <span className="text-green-600"> Unlimited Opportunities Await! 🚀</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">
-              Connect with top companies hiring tech talent
+              Connect with top companies hiring tech talent 🤝
             </p>
             <div className="max-w-2xl mx-auto">
               <div className="flex items-center bg-gray-50 rounded-lg p-2">
